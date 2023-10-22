@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.game-option {
+    margin: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.game-option:hover {
+    transform: scale(1.05);
+}
+
+.game-option img {
+    width: 225px;
+}
+
+.game-selection {
+    display: none;
+}
+
+.game-selection.active {
+    display: block;
+}
+
+.button {
+    margin-top: 20px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Aggiungi stile per il titolo "Enter Player Names" */
+.player-input {
+    display: none;
+    text-align: center;
+}
+.player-input label {
+    font-size: 18px;
+}
+.player-input input[type="text"] {
+    border: 2px solid #3498db;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+}
+.player-input button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.trisTable {
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 1px black;
+}
+
+.trisTable td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.trisTable td img {
+    max-width: 80px;
+    max-height: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
+#players {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#players div {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+#players div:nth-child(1) {
+    color: rgb(183, 0, 255);
+}
+
+#players div:nth-child(2) {
+    color: rgb(255, 136, 0);
+}

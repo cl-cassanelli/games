@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Game</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/trisStyle.css">
+</head>
+<body>
+    <div class="main-screen">
+        <h1>Select a Game</h1>
+
+        <div class="game-container">
+            <div class="game-option" onclick="showPlayerSelection('rockpaperscissors')">
+                <img src="img/rockpaperscissors.jpg" alt="Rock, Paper, Scissors">
+            </div>
+            <div class="game-option" onclick="showPlayerInput('tictactoe')">
+                <img src="img/tictactoe.jpeg" alt="Tic Tac Toe">
+            </div>
+        </div>
+    </div>
+
+    <div class="player-select" style="display: none;">
+        <h1>Select player</h1>
+
+        <div class="game-container">
+            <div class="game-option" onclick="showPlayerInput('rockpaperscissors')">
+                <img src="img/1vs1.jpg" alt="1vs1">
+            </div>
+            <div class="game-option" onclick="showPlayerInput('rockpaperscissors')">
+                <img src="img/bot.png" alt="Bot">
+            </div>
+        </div>
+    </div>
+
+    <!-- Schermata per inserimento dei nickname -->
+    <div class="player-input" style="display: none;">
+        <h1>Select player nickname</h1>
+        <div class="form">
+            <label for="player1">Player 1: </label>
+            <input type="text" id="player1Input" placeholder="Player 1">
+            <br><br>
+            <label for="player2">Player 2: </label>
+            <input type="text" id="player2Input" placeholder="Player 2">
+            <br><br>
+            <button class="button" onclick="startGame()">Start Game</button>
+            <button class="button" onclick="backToGameSelection()">Back</button>
+        </div>
+        
+    </div>
+
+    <!-- Schermata di selezione per Rock, Paper, Scissors 1vs1 -->
+    <div class="game-selection" id="rockpaperscissors-selection" style="display: none;">
+        <h1>Rock, Paper, Scissors</h1>
+
+        <p id="giocatorecorrente"></p>
+
+        
+        <button class="button" onclick="restartTrisGame()">Restart</button>
+        <button class="button" onclick="newGame()">New Game</button>
+        <button class="button" onclick="backToGameSelection()">Back</button>
+    </div>
+    
+
+    <!-- Schermata di selezione per Rock, Paper, Scissors 1vsbot -->
+    <div class="game-selection" id="rockpaperscissors-selection" style="display: none;">
+        <h1>Rock, Paper, Scissors</h1>
+
+        <p id="giocatorecorrente"></p>
+
+        
+        <button class="button" onclick="restartTrisGame()">Restart</button>
+        <button class="button" onclick="newGame()">New Game</button>
+        <button class="button" onclick="backToGameSelection()">Back</button>
+    </div>
+    
+
+    <!-- Schermata di selezione per Tic Tac Toe -->
+    <div class="game-selection" id="tictactoe-selection" style="display: none;">
+        <h1>Tic Tac Toe</h1>
+
+        <p id="giocatorecorrente"></p>
+
+        <table class="trisTable">
+            <tr>
+                <td><img src="img/tris/vuoto.png" id="00" onclick="trisGame(this.id)" onmouseover="trisOv(this.id)" onmouseout="trisOu(this.id)"></td>
+                <td><img src="img/tris/vuoto.png" id="01" onclick="trisGame(this.id)" onmouseover="trisOv(this.id)" onmouseout="trisOu(this.id)"></td>
+                <td><img src="img/tris/vuoto.png" id="02" onclick="trisGame(this.id)" onmouseover="trisOv(this.id)" onmouseout="trisOu(this.id)"></td>
+            </tr>
+            <tr>
+                <td><img src="img/tris/vuoto.png" id="10" onclick="trisGame(this.id)" onmouseover="trisOv(this.id)" onmouseout="trisOu(this.id)"></td>
+                <td><img src="img/tris/vuoto.png" id="11" onclick="trisGame(this.id)" onmouseover="trisOv(this.id)" onmouseout="trisOu(this.id)"></td>
+                <td><img src="img/tris/vuoto.png" id="12" onclick="trisGame(this.id)" onmouseover="trisOv(this.id)" onmouseout="trisOu(this.id)"></td>
+            </tr>
+            <tr>
+                <td><img src="img/tris/vuoto.png" id="20" onclick="trisGame(this.id)" onmouseover="trisOv(this.id)" onmouseout="trisOu(this.id)"></td>
+                <td><img src="img/tris/vuoto.png" id="21" onclick="trisGame(this.id)" onmouseover="trisOv(this.id)" onmouseout="trisOu(this.id)"></td>
+                <td><img src="img/tris/vuoto.png" id="22" onclick="trisGame(this.id)" onmouseover="trisOv(this.id)" onmouseout="trisOu(this.id)"></td>
+            </tr>
+        </table>
+
+        <div id="players">
+            <div id="player1"></div>
+            <div id="player2"></div>
+        </div>  
+
+        <button class="button" onclick="restartTrisGame()">Restart</button>
+        <button class="button" onclick="newGame()">New Game</button>
+        <button class="button" onclick="backToGameSelection()">Back</button>
+    </div>
+
+    <script src="script/script.js"></script>
+    <script src="script/tictactoe.js"></script>
+    <script src="script/rockpaperscissors.js"></script>
+
+    
+
+</body>
+</html>
